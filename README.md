@@ -72,3 +72,4 @@ React UI (ExpenseForm/ExpenseList)
 
 Every file involved has comments explaining what each line/block does — start at
 `backend/server.js` and `frontend/src/App.jsx` and follow the imports.
+# Expence-Tracker
