@@ -1,0 +1,18 @@
+/* index.css
+   Global styles that apply to the whole page (not just one component).
+   Component-specific styles live in App.css instead. */
+
+* {
+  /* Makes width/height calculations include padding & border, which is
+     much less confusing for students than the default box-sizing. */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  /* A soft gradient background makes the app feel less "bare HTML". */
+  background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+  min-height: 100vh;
+  color: #1f2937;
+}

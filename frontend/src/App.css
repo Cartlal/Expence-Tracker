@@ -1,0 +1,248 @@
+/* App.css
+   Styles for the Expense Tracker UI. Organized top-to-bottom in the same
+   order elements appear on the page: layout -> header -> summary -> form
+   -> list -> item -> misc states. Plain CSS, no framework, so it's easy to
+   read and modify line by line. */
+
+/* ---- Page layout --------------------------------------------------- */
+
+.page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 640px;
+}
+
+/* ---- Header ---------------------------------------------------------- */
+
+.app-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.app-subtitle {
+  margin: 4px 0 0;
+  color: #6b7280;
+}
+
+/* ---- Summary card ------------------------------------------------------ */
+
+.summary-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 25px -10px rgba(99, 102, 241, 0.6);
+}
+
+.summary-label {
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.85;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.summary-total {
+  margin: 2px 0 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.summary-count {
+  text-align: right;
+}
+
+.summary-count-number {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* ---- Form ------------------------------------------------------------- */
+
+.expense-form {
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-input {
+  flex: 1 1 120px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.form-input:focus {
+  border-color: #8b5cf6;
+}
+
+.form-input-amount {
+  flex: 1 1 100px;
+}
+
+.form-select {
+  flex: 1 1 140px;
+  cursor: pointer;
+}
+
+.btn-add {
+  flex: 1 1 100px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-add:hover {
+  background: #4f46e5;
+}
+
+/* ---- Expense list --------------------------------------------------- */
+
+.expense-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.expense-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border-radius: 14px;
+  padding: 12px 14px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease;
+}
+
+.expense-item:hover {
+  transform: translateY(-2px);
+}
+
+.expense-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.expense-details {
+  flex: 1;
+  min-width: 0; /* allows text-overflow to work inside a flex child */
+}
+
+.expense-title {
+  margin: 0;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.expense-meta {
+  margin: 2px 0 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.expense-category {
+  font-weight: 600;
+}
+
+.expense-amount {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.btn-delete {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: #fee2e2;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1;
+  transition: background 0.15s ease;
+}
+
+.btn-delete:hover {
+  background: #fecaca;
+}
+
+/* ---- Misc states ------------------------------------------------------ */
+
+.empty-state {
+  text-align: center;
+  padding: 40px 16px;
+  color: #6b7280;
+  background: white;
+  border-radius: 16px;
+}
+
+.empty-state p:first-child {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
+  margin: 0 0 4px;
+}
+
+.empty-state-sub {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.loading-text {
+  text-align: center;
+  color: #6b7280;
+}
+
+.error-banner {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
